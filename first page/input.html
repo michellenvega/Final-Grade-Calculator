@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculate your grade!</title>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </head>
+
+  <body>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+      <!-- Title and top of page -->
+      <div class="container-fluid p-4 mt-0 mb-5 bg-dark text-white text-center">
+      <h1 >Grade Calculator</h1>
+    <p class= "text-dark-50 text-center"> Insert your grades to see how well you are doing!</p>
+  </div>
+<div id="scroll" class="containerpb-3 pt-0">
+
+  <!-- start of the form -->
+    <form id="form" class="container px-5 mx-5" class="needs-validation" onsubmit ="return false">
+      
+      <!-- This div is the titles of each column -->
+    <div class="bg-secondary text-white row mx-3 my-3">
+        <label  class="col text-center" for="name" class="form-label">Assignment Name</label>
+        <label  class="col text-center" for="grade" class="form-label">Grade</label>
+        <label  class="col text-center" for="weight" class="form-label">Weight</label>
+    </div>
+
+    <!-- This "here" group is one row of input boxes -->
+    <!-- Assignment name, grade percentage, weight percentage -->
+    <div id="here"> 
+    <div id="inputrow" class="row my-3 px-3">
+    <input type="name" class="assignment col-sm mx-3 form-control" id="assignment" placeholder="ex. Exam, Final, Homework">
+    
+    <div class="input-group col-sm">
+    <input required type="number"  max="100" class="grade ml-3 form-control" id="grade" placeholder="Percentage, out of 100">
+    <span class="input-group-text">%</span>
+    </div>
+
+  <div class="input-group col-sm">
+    <input required type="number" max="100" class="weighting ml-3 form-control" id="weighting" placeholder="Percentage, out of 100">
+    <span class="mx-auto input-group-text">%</span>
+  </div>
+
+  </div>
+</div>
+
+
+<!-- These are the buttons at the bottom -->
+<!-- Delete and add an assignment, and submit. -->
+  <div class="row">
+    <input id="addassignment" class="col-sm-3 btn btn-outline-dark p-auto m-auto" value="Add assignment"> 
+    <input id="delassignment" class="col-sm-3 btn btn-outline-dark p-auto m-auto" value="Delete assignment"> 
+    <input id="submit" type="submit" class="col-sm-3 btn btn-outline-dark p-auto m-auto" value="Submit!">
+    </div>
+
+  </form>
+</div>
+
+<!-- This container will show the result of the calculation. -->
+
+<div id= "result" class="footer container-fluid bg-dark text-white pb-3 mb-0 mt-5 pt-3">
+  <h3 class="text-center">Your grade for this class is:</h3>
+  <h4 id="percent" class="mx-auto p-3 mb-0 text-center" style="width: 100px"> __% </h4>
+</div>
+
+
+  </body>
+</html>
